@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.18">
-<title>Untitled</title>
+<title>Получение задачи (GET)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,76 +438,128 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
+<h1>Получение задачи (GET)</h1>
 </div>
 <div id="content">
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>k_id
-|Число
-|true
-|Идентификатор задачи</p>
+<p>Метод получения задачи.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_входные_параметры">Входные параметры</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Входные параметры приведены в таблице ниже.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Входные параметры</caption>
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Параметр</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Ключ</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Тип</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Не пустой</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Описание</strong></th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">== Выходные параметры</p>
-<p class="tableblock">Выходные параметры:</p>
-<p class="tableblock">* в случае успеха вернуть параметры задачи, указанные в таблице;</p>
-<p class="tableblock">* иначе вернуть описание ошибки.</p>
-<p class="tableblock">.Параметры задач</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Идентификтор задачи</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">task_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Число</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Идентификатор задачи</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>|<strong>Параметр</strong>  |<strong>Ключ</strong>  |<strong>Тип</strong>  |<strong>Не пустой</strong>  |<strong>Описание</strong></p>
 </div>
-<div class="paragraph">
-<p>|Заголовок задачи
-|title
-|Однострочный текст
-|true
-|Краткое описание задачи</p>
 </div>
+<div class="sect1">
+<h2 id="_выходные_параметры">Выходные параметры</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>|Описание
-|description
-|Многострочный текст
-|false
-|Полное описание задачи, что необходимо сделать</p>
+<p>Выходные параметры:</p>
 </div>
-<div class="paragraph">
-<p>|Статус
-|status
-|Однострочный текст
-|true
-|Статус исполнения задачи.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>в случае успеха вернуть параметры задачи, указанные в таблице;</p>
+</li>
+<li>
+<p>иначе вернуть описание ошибки.</p>
+</li>
+</ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Параметры задач</caption>
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Параметр</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Ключ</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Тип</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Не пустой</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Описание</strong></th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">== Алгоритм</p>
-<p class="tableblock">Алгоритм работы метода приведён на диаграмме.</p>
-<p class="tableblock">[plantuml, get, png]
-----
-tart</p>
-<p class="tableblock">:Получить параметры задачи;</p>
-<p class="tableblock">:Вернуть результат;</p>
-<p class="tableblock">stop</p>
-<p class="tableblock">@enduml
-----</p>
-<p class="tableblock"><a href="../index.html">Назад</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Заголовок задачи</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Однострочный текст</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Краткое описание задачи</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Описание</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Многострочный текст</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Полное описание задачи, что необходимо сделать</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Статус</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Однострочный текст</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Статус исполнения задачи.</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_алгоритм">Алгоритм</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Алгоритм работы метода приведён на диаграмме.</p>
+</div>
+<div class="imageblock"><div class="content"><img class="plantuml" src="https://www.plantuml.com/plantuml/png/~1U9npA2v9B2efpStX0j5SN5ONvb_OTs7tnUQBxHTsN6owsADmOV-53HSRBcouiEV2Lg10myLkXGlRWTmjG66W6ckGdab0gOOBUu6wG3g0pAqNjbzi1XhJSx49gAm9gAYu9B-0YyiXDIy5P1cK1W02mqP6" /></div></div>
+<div class="paragraph">
+<p><a href="../index.html">Назад</a></p>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-01-10 19:16:56 UTC
+Last updated 2023-01-10 20:17:21 UTC
 </div>
 </div>
 </body>
